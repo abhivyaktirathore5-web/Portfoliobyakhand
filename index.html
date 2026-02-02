@@ -4,211 +4,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | [Your Name]</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Akhand Pratap Singh | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav id="navbar">
-        <div class="logo">APS</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">APS.</div>
+            <ul class="nav-links">
+                <li><a href="#about" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <!-- Hero / About Section -->
-    <header id="about">
-        <div class="hero-content">
-            <p class="greeting">Hello, I'm</p>
-            <h1 class="name">Akhand Pratap Singh</h1>
-            <p class="tagline">Power BI Developer & Data Analyst</p>
-            <p class="bio">With 5 years of experience in data analysis and ETL development, I excel in Power BI,
-                Informatica Power Centre, and AWS Cloud. I aim to leverage my healthcare domain expertise to drive
-                data-driven strategies and enhance business decision-making.</p>
-            <div class="cta-group">
-                <a href="#contact" class="cta-button primary">Get In Touch</a>
-                <a href="#projects" class="cta-button secondary">View Work</a>
+    <!-- Header / About Section (Hero) -->
+    <header id="about" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <p class="greeting">Hello, I'm</p>
+                <h1 class="name">Akhand Pratap Singh</h1>
+                <p class="tagline">Power BI Developer & Data Analyst</p>
+                <p class="bio">
+                    With 5 years of experience in data analysis and ETL development, I excel in Power BI,
+                    Informatica Power Center, and AWS Cloud. I aim to leverage my healthcare domain expertise to drive
+                    data-driven strategies and enhance business decision-making.
+                </p>
+                <div class="cta-group">
+                    <a href="#contact" class="btn-primary">Get In Touch</a>
+                    <a href="#experience" class="btn-secondary">View Work</a>
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Skills Section -->
-    <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>BI & Visualization</h3>
-                <p>Power BI, Tableau</p>
-            </div>
-            <div class="skill-card">
-                <h3>Data Processing</h3>
-                <p>SQL, Power Query, DAX</p>
-            </div>
-            <div class="skill-card">
-                <h3>Cloud & ETL</h3>
-                <p>AWS, Informatica PowerCenter</p>
-            </div>
-            <div class="skill-card">
-                <h3>Automation</h3>
-                <p>Power Automate</p>
-            </div>
-            <div class="skill-card">
-                <h3>Languages</h3>
-                <p>Python (Pandas, Numpy)</p>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>BI & Visualization</h3>
+                    <p>Power BI, Tableau</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Processing</h3>
+                    <p>SQL, Power Query, DAX</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>Automation</h3>
+                    <p>Power Automate</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud & Data Platforms</h3>
+                    <p>AWS, Microsoft Fabric</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Languages/Tools</h3>
+                    <p>Python (Pandas, NumPy)</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>ETL & Integration</h3>
+                    <p>Informatica PowerCentre</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="timeline">
-            <!-- Job 1 -->
-            <div class="timeline-item">
-                <div class="timeline-date">May 2021 - Present</div>
-                <div class="timeline-content">
-                    <h3>Power BI Developer</h3>
-                    <h4>Tata Consultancy Services Ltd | Project: GE Healthcare</h4>
-                    <ul>
-                        <li>Have 4 years of experience on Reporting tool: Microsoft Power BI.</li>
-                        <li>Leveraged AWS services including Amazon Redshift, S3, Glue, and Lambda for cloud-based data
-                            integration, storage, and automation.</li>
-                        <li>Imported data from SQL Server DB, Amazon Redshift, Salesforce and Oracle to Power BI.</li>
-                        <li>Designed and developed interactive Power BI dashboards with advanced features such as Field
-                            Parameters.</li>
-                        <li>Built Dynamic SQL queries using M Query to optimize dataset retrieval.</li>
-                        <li>Developed dynamic visuals and optimized performance for large datasets (up to 115M rows).
-                        </li>
-                        <li>Created complex DAX measures, calculated columns, and KPIs.</li>
-                        <li>Applied Row-Level Security (RLS) to ensure secure, role-based data access.</li>
-                    </ul>
-                </div>
-            </div>
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
 
-            <!-- Job 2 -->
-            <div class="timeline-item">
-                <div class="timeline-date">Nov 2021 - Dec 2022</div>
-                <div class="timeline-content">
-                    <h3>ETL Developer</h3>
-                    <h4>Tata Consultancy Services Ltd | Project: GE Healthcare</h4>
-                    <ul>
-                        <li>Developed and maintained ETL workflows using Informatica PowerCenter.</li>
-                        <li>Performed data extraction, transformation, and loading from multiple sources (Oracle, SQL
-                            Server, Flat Files).</li>
-                        <li>Optimized ETL mappings and sessions to improve performance.</li>
-                        <li>Implemented error handling, debugging, and recovery strategies.</li>
-                    </ul>
+                <!-- Job 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">May 2021 – Present</div>
+                    <div class="timeline-content">
+                        <h3>Power BI Developer</h3>
+                        <h4>Tata Consultancy Services Ltd | Project: GE Healthcare</h4>
+                        <ul>
+                            <li>Integrated data from SQL Server, Amazon Redshift, Salesforce, Oracle, SharePoint, and
+                                Microsoft Fabric Lakehouse into Power BI to deliver unified reporting and advanced
+                                analytics.</li>
+                            <li>Developed interactive Power BI dashboards leveraging advanced features such as Field
+                                Parameters for flexible analysis.</li>
+                            <li>Built dynamic SQL queries using M Query to support parameterized and scalable reporting
+                                solutions.</li>
+                            <li>Designed dynamic visuals (e.g., monthly trend bar charts) to enhance stakeholder
+                                insights.</li>
+                            <li>Optimized performance for large datasets (up to 115M rows) through query tuning and data
+                                model optimization.</li>
+                            <li>Created complex DAX measures, calculated columns, and KPIs to deliver actionable
+                                business intelligence.</li>
+                            <li>Applied Row-Level Security (RLS) to ensure secure, role-based access to reports.</li>
+                            <li>Leveraged Power Automate to send automated email alerts to the entire team whenever
+                                defined thresholds were met, ensuring proactive monitoring.</li>
+                            <li>Implemented Power Automate workflows to export KPIs into Excel format, enabling
+                                structured reporting and supporting due diligence.</li>
+                            <li>Implemented error-handling visuals to improve user experience and data reliability.</li>
+                            <li>Automated refresh schedules and published dashboards to Power BI Service for
+                                enterprise-wide access.</li>
+                            <li>Collaborated with stakeholders to gather requirements, deliver training, and ensure
+                                adoption of BI solutions.</li>
+                            <li>Documented development processes and created knowledge transfer materials to support
+                                long-term sustainability.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Job 3 -->
-            <div class="timeline-item">
-                <div class="timeline-date">Sep 2020 - May 2021</div>
-                <div class="timeline-content">
-                    <h3>Data Analyst</h3>
-                    <h4>Scry Analytics Pvt Ltd</h4>
-                    <ul>
-                        <li>Collected, cleaned, and analyzed datasets to support business decision-making.</li>
-                        <li>Built Excel-based dashboards and reports for tracking KPIs.</li>
-                        <li>Conducted data quality checks and prepared summary reports.</li>
-                    </ul>
+                <!-- Job 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Nov 2021 – Dec 2022</div>
+                    <div class="timeline-content">
+                        <h3>ETL Developer</h3>
+                        <h4>Tata Consultancy Services Ltd | Project: GE Healthcare</h4>
+                        <ul>
+                            <li>Developed and maintained ETL workflows using Informatica PowerCenter.</li>
+                            <li>Performed extraction, transformation, and loading (ETL) from multiple sources including
+                                Oracle, SQL Server, and flat files.</li>
+                            <li>Optimized ETL mappings and sessions for improved performance and scalability.</li>
+                            <li>Created reusable transformations, mapplets, and workflows to streamline development.
+                            </li>
+                            <li>Implemented error handling, debugging, and recovery strategies to ensure data integrity.
+                            </li>
+                            <li>Collaborated with business analysts to design and deliver effective data solutions.</li>
+                            <li>Conducted unit testing, integration testing, and deployment of ETL jobs in production
+                                environments.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Internships -->
-            <div class="timeline-item">
-                <div class="timeline-date">June 2019 - July 2019</div>
-                <div class="timeline-content">
-                    <h3>Intern</h3>
-                    <h4>IIM Nagpur</h4>
-                    <p>Web Scraping of articles from all newspapers and magazines using Python and Octoparse Software
-                        for 'Analysis of Sustainability Reports of Fortune 500 Companies'.</p>
+                <!-- Job 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Sep 2020 – May 2021</div>
+                    <div class="timeline-content">
+                        <h3>Data Analyst</h3>
+                        <h4>Scry Analytics Pvt Ltd</h4>
+                        <ul>
+                            <li>Collected, cleaned, and analyzed datasets to support business decision-making.</li>
+                            <li>Built Excel-based dashboards and reports for tracking key performance indicators.</li>
+                            <li>Conducted data quality checks and prepared summary reports for management.</li>
+                            <li>Assisted in migrating manual reports to automated reporting solutions.</li>
+                            <li>Worked with the analytics team to deliver insights on client projects.</li>
+                            <li>Utilized Python libraries such as Pandas and NumPy for exploratory data analysis (EDA),
+                                enabling deeper insights into complex datasets.</li>
+                            <li>Applied statistical techniques and data visualization methods in Python to identify
+                                trends, anomalies, and actionable patterns.</li>
+                            <li>Calculated descriptive statistics (mean, median, variance, standard deviation) to
+                                summarize and interpret large datasets efficiently.</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="timeline-item">
-                <div class="timeline-date">June 2018</div>
-                <div class="timeline-content">
-                    <h3>Summer Trainee</h3>
-                    <h4>ISRO - Lucknow</h4>
-                    <p>Case study analysis of Orbit and its Mechanics, including Keplerian Orbit and Vis-Viva Equation.
-                    </p>
+                <!-- Internship 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2019 – Jul 2019</div>
+                    <div class="timeline-content">
+                        <h3>Intern</h3>
+                        <h4>IIM Nagpur</h4>
+                        <ul>
+                            <li>Worked under Prof. Kapil Kaushik and Prof. Prakash Awasthi on the project “Analysis of
+                                Sustainability Reports of Fortune 500 Companies.”</li>
+                            <li>Performed web scraping of articles from newspapers and magazines using Python and
+                                Octoparse software.</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <!-- Internship 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2018</div>
+                    <div class="timeline-content">
+                        <h3>Summer Trainee</h3>
+                        <h4>ISRO - Lucknow</h4>
+                        <ul>
+                            <li>Worked under the guidance of Dr. Subhash Danodiya (Sr. Scientist) on the case study
+                                “Analysis of Orbit and Its Mechanics.”</li>
+                            <li>Analyzed parameters such as Keplerian Orbit and Orbit Perturbation Manoeuvrings.</li>
+                            <li>Learned about Liberation Point, Vis-Viva Equation, and spacecraft subsystems.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
     <!-- Achievements Section -->
-    <section id="achievements">
-        <h2>Achievements & Awards</h2>
-        <div class="achievements-list">
-            <div class="achievement-item">Cleared TCS Elevate Wings 1 DCA exam.</div>
-            <div class="achievement-item">Received Continuous Feedback Star Certificate.</div>
-            <div class="achievement-item">Received Xcellerate Warrior Certificate in TCS.</div>
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2 class="section-title">Achievements & Awards</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-certificate achievement-icon"></i>
+                    <p><strong>PL‑300: Microsoft Power BI Data Analyst</strong> – Certified</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-trophy achievement-icon"></i>
+                    <p><strong>Secured 2nd Position at TCS AI Friday Hackathon</strong>, recognized for innovative
+                        problem‑solving and application of AI/analytics techniques in a competitive environment.</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-trophy achievement-icon"></i>
+                    <p>Cleared TCS Elevate Wings 1 DCA exam.</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-star achievement-icon"></i>
+                    <p>Received Continuous Feedback Star Certificate.</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-certificate achievement-icon"></i>
+                    <p>Received Xcellerate Warrior Certificate in TCS.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-grid">
-            <div class="education-card">
-                <h3>B.Tech (Hons) - Electronics Engineering</h3>
-                <h4>Dr. APJ Abdul Kalam Technical University</h4>
-                <p class="year">2020</p>
-                <p class="grade">CGPA: 7.58</p>
-            </div>
-            <div class="education-card">
-                <h3>Higher Secondary</h3>
-                <h4>Shree Sanatan Dharam Education Centre, Kanpur</h4>
-                <p class="year">2015</p>
-                <p class="grade">84%</p>
-            </div>
-            <div class="education-card">
-                <h3>High School</h3>
-                <h4>Shree Sanatan Dharam Education Centre, Kanpur</h4>
-                <p class="year">2013</p>
-                <p class="grade">92.5%</p>
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>B.Tech (Hons) - Electronics Engineering</h3>
+                    <h4>Dr. APJ Abdul Kalam Technical University</h4>
+                    <p class="edu-meta">2020 | CGPA: 7.58</p>
+                </div>
+                <div class="education-card">
+                    <h3>Higher Secondary</h3>
+                    <h4>Shree Sanatan Dharam Education Centre, Kanpur</h4>
+                    <p class="edu-meta">2015 | 84%</p>
+                </div>
+                <div class="education-card">
+                    <h3>High School</h3>
+                    <h4>Shree Sanatan Dharam Education Centre, Kanpur</h4>
+                    <p class="edu-meta">2013 | 92.5%</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <div class="contact-card">
-            <p>I'm always open to discussing product design work or partnership opportunities.</p>
-            <div class="contact-details">
-                <div class="contact-item">
-                    <span>Email:</span> <a href="mailto:akhand.singh3@outlook.com">akhand.singh3@outlook.com</a>
-                </div>
-                <div class="contact-item">
-                    <span>Phone:</span> <a href="tel:7376240551">7376240551</a>
-                </div>
-                <div class="contact-item">
-                    <span>Location:</span> Kanpur, India
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-card">
+                <p class="contact-intro">Open to opportunities in data analytics, BI solutions, automation, and
+                    collaborative projects leveraging Power BI, SQL, Python, and Microsoft Fabric.</p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:akhand.singh3@outlook.com">akhand.singh3@outlook.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:7376240551">7376240551</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kanpur, India</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Akhand Pratap Singh. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
