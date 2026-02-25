@@ -29,14 +29,21 @@
     <!-- Header / About Section (Hero) -->
     <header id="about" class="hero">
         <div class="container hero-container">
+            <div class="hero-left-badge">
+                <img src="Logos/PL 300 Badge.png" alt="PL-300 Certified Badge" class="side-badge">
+            </div>
             <div class="hero-content">
                 <p class="greeting">Hello, I'm</p>
                 <h1 class="name">Akhand Pratap Singh</h1>
                 <p class="tagline">Power BI Developer & Data Analyst</p>
                 <p class="bio">
-                    With 5 years of experience in data analysis and ETL development, I excel in Power BI,
-                    Informatica Power Center, and AWS Cloud. I aim to leverage my healthcare domain expertise to drive
-                    data-driven strategies and enhance business decision-making.
+                    I am a Data Visualization Engineer with five years of experience specializing in transforming
+                    complex datasets into insightful, engaging, and actionable visualizations. My work enables
+                    organizations to make informed decisions and uncover deeper business insights through well‑designed
+                    dashboards and reports.<br><br>
+                    My technical expertise spans a wide range of tools and technologies, including Power BI, Microsoft
+                    Fabric, Power Automate, AWS Cloud, SQL, and Python. I excel at translating intricate data into
+                    clear, visually compelling narratives that drive data‑driven strategies across industries.
                 </p>
                 <div class="cta-group">
                     <a href="#contact" class="btn-primary">Get In Touch</a>
@@ -54,32 +61,83 @@
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
                     <h3>BI & Visualization</h3>
-                    <p>Power BI, Tableau</p>
+                    <div class="skill-logos">
+                        <div class="skill-logo-item">
+                            <img src="Logos/Power BI.png" alt="Power BI" title="Power BI">
+                            <span>Power BI</span>
+                        </div>
+                        <div class="skill-logo-item">
+                            <img src="Logos/tableau.png" alt="Tableau" title="Tableau">
+                            <span>Tableau</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
                     <h3>Data Processing</h3>
-                    <p>SQL, Power Query, DAX</p>
+                    <div class="skill-logos">
+                        <div class="skill-logo-item">
+                            <img src="Logos/SQL.jpg" alt="SQL" title="SQL">
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-logo-item">
+                            <img src="Logos/Power Query.jpg" alt="Power Query" title="Power Query">
+                            <span>Power Query</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-robot"></i></div>
                     <h3>Automation</h3>
-                    <p>Power Automate</p>
+                    <div class="skill-logos">
+                        <div class="skill-logo-item">
+                            <img src="Logos/Power Automate.jpg" alt="Power Automate" title="Power Automate">
+                            <span>Power Automate</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-cloud"></i></div>
                     <h3>Cloud & Data Platforms</h3>
-                    <p>AWS, Microsoft Fabric</p>
+                    <div class="skill-logos">
+                        <div class="skill-logo-item">
+                            <img src="Logos/AWS.png" alt="AWS" title="AWS">
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-logo-item">
+                            <img src="Logos/fabric.jpg" alt="Microsoft Fabric" title="Microsoft Fabric">
+                            <span>Microsoft Fabric</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-code"></i></div>
                     <h3>Languages/Tools</h3>
-                    <p>Python (Pandas, NumPy)</p>
+                    <div class="skill-logos">
+                        <div class="skill-logo-item">
+                            <img src="Logos/Python.png" alt="Python" title="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-logo-item">
+                            <img src="Logos/Pandas.png" alt="Pandas" title="Pandas">
+                            <span>Pandas</span>
+                        </div>
+                        <div class="skill-logo-item">
+                            <img src="Logos/Numpy.png" alt="NumPy" title="NumPy">
+                            <span>NumPy</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-server"></i></div>
                     <h3>ETL & Integration</h3>
-                    <p>Informatica PowerCentre</p>
+                    <div class="skill-logos">
+                        <div class="skill-logo-item">
+                            <img src="Logos/Informatica.png" alt="Informatica PowerCentre"
+                                title="Informatica PowerCentre">
+                            <span>Informatica PowerCenter</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -214,28 +272,32 @@
     <section id="achievements" class="section">
         <div class="container">
             <h2 class="section-title">Achievements & Awards</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <i class="fas fa-certificate achievement-icon"></i>
-                    <p><strong>PL‑300: Microsoft Power BI Data Analyst</strong> – Certified</p>
+            <div class="carousel-container">
+                <button class="carousel-btn" id="prev-achievement"><i class="fas fa-caret-left"></i></button>
+                <div class="achievements-slider">
+                    <div class="achievement-card active image-card">
+                        <img src="Certificates/PL 300 Certificate.png"
+                            alt="PL-300: Microsoft Power BI Data Analyst Certificate" class="certificate-img" />
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-trophy achievement-icon"></i>
+                        <p><strong>Secured 2nd Position at TCS AI Friday Hackathon</strong>, recognized for innovative
+                            problem‑solving and application of AI/analytics techniques in a competitive environment.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-trophy achievement-icon"></i>
+                        <p>Cleared TCS Elevate Wings 1 DCA exam.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-star achievement-icon"></i>
+                        <p>Received Continuous Feedback Star Certificate.</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-certificate achievement-icon"></i>
+                        <p>Received Xcellerate Warrior Certificate in TCS.</p>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-trophy achievement-icon"></i>
-                    <p><strong>Secured 2nd Position at TCS AI Friday Hackathon</strong>, recognized for innovative
-                        problem‑solving and application of AI/analytics techniques in a competitive environment.</p>
-                </div>
-                <div class="achievement-card">
-                    <i class="fas fa-trophy achievement-icon"></i>
-                    <p>Cleared TCS Elevate Wings 1 DCA exam.</p>
-                </div>
-                <div class="achievement-card">
-                    <i class="fas fa-star achievement-icon"></i>
-                    <p>Received Continuous Feedback Star Certificate.</p>
-                </div>
-                <div class="achievement-card">
-                    <i class="fas fa-certificate achievement-icon"></i>
-                    <p>Received Xcellerate Warrior Certificate in TCS.</p>
-                </div>
+                <button class="carousel-btn" id="next-achievement"><i class="fas fa-caret-right"></i></button>
             </div>
         </div>
     </section>

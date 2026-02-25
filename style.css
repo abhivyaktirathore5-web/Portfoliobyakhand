@@ -176,12 +176,29 @@ h4 {
 .hero-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.hero-left-badge {
+    flex-shrink: 0;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.side-badge {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.side-badge:hover {
+    transform: scale(1.05);
 }
 
 .hero-content {
-    max-width: 900px;
+    max-width: 800px;
     animation: fadeIn 1s ease-out;
 }
 
@@ -219,14 +236,18 @@ h4 {
     color: var(--accent-color);
     font-size: 1.2rem;
     margin-bottom: 10px;
+    margin-left: 10px;
     font-family: var(--font-body);
 }
 
 .name {
     font-size: 4.5rem;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
     background: -webkit-linear-gradient(#fff, #94a3b8);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
@@ -287,12 +308,41 @@ h4 {
     color: var(--text-primary);
     font-family: var(--font-body);
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.skill-card p {
+.skill-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.skill-logo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-logo-item span {
+    font-size: 0.85rem;
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.skill-logos img {
+    height: 50px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.skill-logos img:hover {
+    transform: scale(1.1);
 }
 
 /* Experience Section */
@@ -377,22 +427,85 @@ h4 {
     background-color: var(--bg-secondary);
 }
 
-.achievements-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 3rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 10px;
+}
+
+.carousel-btn:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.achievements-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
 }
 
 .achievement-card {
     background: var(--card-bg);
     padding: 30px;
     border-radius: 8px;
-    display: flex;
+    display: none;
     align-items: center;
     gap: 20px;
     border: 1px solid var(--border-color);
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.achievement-card.active {
+    display: flex;
+    animation: fadeInSlide 0.5s ease-in-out;
+}
+
+.image-card {
+    padding: 0;
+    overflow: hidden;
+    height: 450px;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.certificate-img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .achievement-card:hover {
@@ -523,7 +636,17 @@ footer {
     }
 
     .hero-container {
+        flex-direction: column;
         text-align: center;
+        gap: 30px;
+    }
+
+    .side-badge {
+        width: 150px;
+    }
+
+    .hero-left-badge {
+        margin-bottom: 10px;
     }
 
     .hero-content {

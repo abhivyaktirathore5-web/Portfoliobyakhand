@@ -34,4 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         observer.observe(el);
     });
+
+    // Achievement Carousel Logic
+    const achievementCards = document.querySelectorAll('.achievements-slider .achievement-card');
+    const prevBtn = document.getElementById('prev-achievement');
+    const nextBtn = document.getElementById('next-achievement');
+    let currentAchievementIndex = 0;
+
+    if (achievementCards.length > 0 && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            achievementCards[currentAchievementIndex].classList.remove('active');
+            currentAchievementIndex = (currentAchievementIndex - 1 + achievementCards.length) % achievementCards.length;
+            achievementCards[currentAchievementIndex].classList.add('active');
+        });
+
+        nextBtn.addEventListener('click', () => {
+            achievementCards[currentAchievementIndex].classList.remove('active');
+            currentAchievementIndex = (currentAchievementIndex + 1) % achievementCards.length;
+            achievementCards[currentAchievementIndex].classList.add('active');
+        });
+    }
 });
