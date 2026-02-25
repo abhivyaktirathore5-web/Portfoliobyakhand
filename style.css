@@ -268,6 +268,57 @@ h4 {
     max-width: 700px;
 }
 
+/* About Me Section */
+#about-me {
+    background-color: var(--bg-primary);
+}
+
+.about-me-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-me-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-me-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid var(--accent-gold);
+    box-shadow: var(--card-shadow);
+}
+
+.about-me-content {
+    flex: 1.5;
+}
+
+.section-title.left-aligned {
+    text-align: left;
+}
+
+.section-title.left-aligned::after {
+    margin: 15px 0 0;
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+}
+
+.about-text .hashtags {
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-top: 2rem;
+}
+
 /* Skills Section */
 #skills {
     background-color: var(--bg-secondary);
@@ -639,6 +690,24 @@ footer {
         flex-direction: column;
         text-align: center;
         gap: 30px;
+    }
+
+    .about-me-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .about-me-image img {
+        max-width: 300px;
+    }
+
+    .section-title.left-aligned {
+        text-align: center;
+    }
+
+    .section-title.left-aligned::after {
+        margin: 15px auto 0;
     }
 
     .side-badge {
