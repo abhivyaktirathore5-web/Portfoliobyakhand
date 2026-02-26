@@ -43,6 +43,7 @@ body {
     color: var(--text-primary);
     font-family: var(--font-body);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 /* Utilities */
@@ -684,12 +685,13 @@ footer {
 @media (max-width: 768px) {
     .name {
         font-size: 2.8rem;
+        padding-right: 0;
     }
 
     .hero-container {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
+        gap: 20px;
     }
 
     .about-me-container {
@@ -734,7 +736,43 @@ footer {
         left: 11px;
     }
 
+    /* Wrap navigation elegantly on mobile */
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+        padding: 5px 0;
+    }
+
     .nav-links {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    /* Keep the slider responsive */
+    .carousel-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .carousel-btn {
+        font-size: 2.2rem;
+    }
+
+    .image-card,
+    .pdf-card {
+        height: auto;
+        min-height: 250px;
+        padding: 10px;
+    }
+
+    .certificate-img {
+        max-height: 300px;
     }
 }
