@@ -136,6 +136,14 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    cursor: pointer;
 }
 
 .logo {
@@ -251,7 +259,7 @@ h4 {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    white-space: nowrap;
+    white-space: normal;
 }
 
 .tagline {
@@ -739,21 +747,50 @@ footer {
 
     /* Wrap navigation elegantly on mobile */
     .nav-container {
-        flex-direction: column;
-        gap: 15px;
-        padding: 5px 0;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 5px 20px;
+    }
+
+    .menu-icon {
+        display: block;
     }
 
     .nav-links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
+        display: none;
+        flex-direction: column;
         width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgba(2, 6, 23, 0.95);
+        padding: 20px 0;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--card-shadow);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .nav-links a {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
+        padding: 10px 0;
+        display: inline-block;
+    }
+
+    /* Force buttons side-by-side */
+    .cta-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
     }
 
     /* Keep the slider responsive */
